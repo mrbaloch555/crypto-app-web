@@ -1,0 +1,44 @@
+@import "../../scss/variable";
+@import "../../scss/mixins";
+.signbtn {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &-container {
+    width: 23%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include respond(phone) {
+      width: 100%;
+    }
+
+    &-logo {
+      & > img {
+        height: 14rem;
+      }
+    }
+    &-btns {
+      margin-top: 5rem;
+      margin-bottom: 3rem;
+
+      &:not(:last-child) {
+        margin-bottom: 2rem;
+      }
+    }
+    & > p {
+      font-family: "Oswald";
+      margin: 4rem 0rem;
+      color: #707070;
+      font-size: 1.2rem;
+    }
+    &-icons {
+      width: 40%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
